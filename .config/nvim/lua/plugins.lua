@@ -10,4 +10,17 @@ require 'packer'.startup(function (use)
             'nvim-lua/plenary.nvim'
         }
     }
+
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
+
+    use {
+        'williamboman/mason.nvim',
+        'williamboman/mason-lspconfig.nvim',
+        'neovim/nvim-lspconfig'
+    }
+
+    use 'mfussenegger/nvim-lint'
 end)
